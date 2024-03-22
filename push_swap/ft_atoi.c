@@ -6,12 +6,11 @@
 /*   By: ynachat <ynachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 16:33:06 by ynachat           #+#    #+#             */
-/*   Updated: 2024/02/25 11:33:06 by ynachat          ###   ########.fr       */
+/*   Updated: 2024/03/22 02:38:53 by ynachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 int	ft_atoi(const char *str)
 {

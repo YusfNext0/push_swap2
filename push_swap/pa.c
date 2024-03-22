@@ -6,7 +6,7 @@
 /*   By: ynachat <ynachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 12:07:37 by ynachat           #+#    #+#             */
-/*   Updated: 2024/03/08 21:25:29 by ynachat          ###   ########.fr       */
+/*   Updated: 2024/03/18 02:35:20 by ynachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ void    pa(p_list **a, p_list **b)
 {
     p_list  *temp;
 
-    temp = (*a);
-    (*a) = (*a)->next;
-    temp->next = (*b);
-    (*b) = temp;
-    write (1, "pa", 2);
+    if (!(*b))
+        return;
+    temp = (*b);
+    (*b) = (*b)->next;
+    temp->next = (*a);
+    (*a) = temp;
+    write (1, "pa\n", 3);
 }

@@ -6,15 +6,17 @@
 /*   By: ynachat <ynachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 11:58:05 by ynachat           #+#    #+#             */
-/*   Updated: 2024/03/08 21:26:51 by ynachat          ###   ########.fr       */
+/*   Updated: 2024/03/18 23:25:55 by ynachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void  *ss(p_list **a, p_list **b)
+void  ss(p_list **a, p_list **b)
 {
-    sa(a);
-    sb(b);
-    write (1, "ss", 2);
+ 
+    
+    sa(a , 1);
+    sb(b , 1);
+    write (1, "ss\n", 3);
 }

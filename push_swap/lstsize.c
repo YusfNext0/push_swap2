@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   lstsize.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynachat <ynachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 21:43:29 by ynachat           #+#    #+#             */
-/*   Updated: 2024/03/18 02:38:24 by ynachat          ###   ########.fr       */
+/*   Created: 2024/03/19 02:19:43 by ynachat           #+#    #+#             */
+/*   Updated: 2024/03/19 11:46:36 by ynachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "push_swap.h"
 
-void    rr(p_list **a, p_list **b)
+int	lstsize(p_list *lst)
 {
-    ra(a, 1);
-    rb(b, 1);
-    write (1, "rr\n", 3);
+	p_list	*node;
+	int		i;
+
+	i = 0;
+	if (!lst)
+		return (0);
+	node = lst;
+	while (node != NULL)
+	{
+		i++;
+		node = node->next;
+	}
+	return (i);
 }

@@ -6,17 +6,19 @@
 /*   By: ynachat <ynachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 09:26:05 by ynachat           #+#    #+#             */
-/*   Updated: 2024/03/08 21:26:10 by ynachat          ###   ########.fr       */
+/*   Updated: 2024/03/19 02:12:24 by ynachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    rra(p_list **a)
+void    rra(p_list **a, int k)
 {
     p_list *last;
     p_list *befor;
 
+    if (!(*a) || !(*a)->next)
+        return;
     befor = (*a);
     last = lstlast((*a));
     while (befor->next->next)
@@ -24,5 +26,8 @@ void    rra(p_list **a)
     befor->next = NULL;
     last->next = (*a);
     (*a) = last;
-    write (1, "rra", 3);
+    if (k == 1)
+        return;
+    else
+        write (1, "rra\n", 4);
 }

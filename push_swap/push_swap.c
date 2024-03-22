@@ -6,7 +6,7 @@
 /*   By: ynachat <ynachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 23:16:48 by ynachat           #+#    #+#             */
-/*   Updated: 2024/03/10 11:47:14 by ynachat          ###   ########.fr       */
+/*   Updated: 2024/03/22 01:44:33 by ynachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ int main(int ac, char *av[])
 	int i;
 	int j;
 	p_list *a = NULL;
-	p_list *b = NULL;
+	p_list *b;
 	p_list *new  = NULL;
 	p_list *head;
 	char **p;
 
 	i = 1;
+	b = NULL;
 	if (ac == 1)
 		return (0);
 	while (av[i])
@@ -53,15 +54,18 @@ int main(int ac, char *av[])
 		}
 		i++;
 	}
-	b = lstnew(ft_atoi(ft_strdup("000")));
-	//sa(&a);
-	// ra(&a);
-	// rra(&a);
-	test_sort3(&a);
-	// indexx(&a);
-	while (a)
-	{
-		printf("\n%d\n index : %d\n", a->content, a->index);
-		a = a->next;
-	}
+
+	indexx(&a);
+	sort_all(&a, &b);
+	// while (b)
+	// {
+	// 	printf("\n%d\n index : %d\n", b->content, b->index);
+	// 	b = b->next;
+	// }
+	// printf ("////////////////// \n");
+	// while (a)
+	// {
+	// 	printf("\n%d\n index : %d\n", a->content, a->index);
+	// 	a = a->next;
+	// }
 }
